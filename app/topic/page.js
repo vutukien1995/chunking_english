@@ -38,25 +38,27 @@ export default function Topic() {
                 </div>
             )}
 
-            {session &&
+            {session && (
                 <>
-                    <div className="w-full text-right">
-                        <a href="/topic/create" className="btn btn-primary">Create Topic</a>
-                    </div>
                     <div className="w-full text-center mb-14">
                         <h1 className="font-bold text-3xl">Your topic</h1>
                     </div>
+
+                    <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-24">
+                        {topics?.map((t, i) => (
+                            <Card title={t.name} link={'/topic/' + t._id} />
+                        ))}
+                    </div>
+
+                    <div className="w-full text-right">
+                        <a href="/topic/create" className="btn btn-primary mr-4">Create Topic</a>
+                        <a href="/topic/ai_find" className="btn btn-primary">Let's AI help you!</a>
+                    </div>
                 </>
 
-            }
-
-            {session && (
-                <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                    {topics?.map((t, i) => (
-                        <Card title={t.name} link={'/topic/' + t._id} />
-                    ))}
-                </div>
             )}
+
+
         </div>
     );
 }

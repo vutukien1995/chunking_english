@@ -55,7 +55,7 @@ export default () => {
             alert("The topic is a bit challenging! Let's try it again!")
         }
 
-        console.log('gemini_answer: ', gemini_answer)
+        console.log('gemini_answer: ', { ...gemini_answer, name: topic })
         setAiTopic(gemini_answer)
     }
 
@@ -73,12 +73,10 @@ export default () => {
                 method: "POST",
                 body: JSON.stringify({ ...aiTopic, name: topic, userId: session?.user.id }),
             });
+
             const text = await response.text();
             alert(text)
 
-            // if (response.ok) {
-
-            // }
         } catch (error) {
             console.log(error);
             alert(error.message);

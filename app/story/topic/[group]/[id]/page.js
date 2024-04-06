@@ -7,7 +7,7 @@ export default ({ params }) => {
 
     useEffect(() => {
         const getTopic = async () => {
-            let t = await import('@utils/story/' + params.id);
+            let t = await import(`@utils/story/${params.group}/${params.id}`);
             setTopic(t.default)
         }
 
@@ -23,7 +23,7 @@ export default ({ params }) => {
             {topic &&
                 <div>
                     {topic.chunks?.map((chunk, index) => (
-                        <div className="bg-blue-950/10 my-4 p-5 rounded-md border border-white">
+                        <div className="bg-blue-950/10 my-4 p-5 rounded-md">
                             <h3 className="mb-5 font-bold underline">Chunking Cluster:</h3>
                             <p className="mb-2 font-bold text-lg">Key:  {chunk.question}</p>
                             <ul className="list-disc ml-8">
@@ -33,8 +33,8 @@ export default ({ params }) => {
                             </ul>
                         </div>
                     ))}
-                    <div className="bg-green-950/20 my-4 p-5 rounded-md border border-white">
-                        <h3 className="mb-5 font-bold underline">Extensions:</h3>
+                    <div className="bg-green-950/20 my-4 p-5 rounded-md">
+                        <h3 className="mb-5 font-bold underline tooltip tooltip-right" data-tip="Vocabularies or phrasal verb are useful for topic">Extensions:</h3>
                         <ul className="list-disc ml-8">
                             {topic.extensions?.map((e, i) => (
                                 <li className="mb-2" key={i}>{e.content + ' : ' + e.description}</li>

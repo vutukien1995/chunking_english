@@ -217,7 +217,9 @@ export default () => {
                         <div className="bg-blue-950/10 my-4 p-5 rounded-md shadow-lg">
                             <h3 className="mb-5 font-bold underline">Chunking Cluster:</h3>
                             <div className="group p-1 mb-2 rounded-md border border-stone-300 cursor-pointer flex justify-between" onClick={() => handleEdit("chunks_key", index)}>
-                                <p className="font-bold text-lg">Key:  {chunk.key}</p>
+                                <p className="font-bold text-lg tooltip" data-tip="KEY is the keyword of the topic. It is often encouraged to be in the form of a question.">
+                                    Key:  {chunk.key}
+                                </p>
                                 <img className="h-7 w-7 opacity-50 group-hover:opacity-100" src="/icons/edit.svg" alt="" />
                             </div>
                             <ul className="list-disc ml-8">
@@ -231,7 +233,9 @@ export default () => {
                                 ))}
                             </ul>
                             <div className="w-full text-right">
-                                <button className="btn btn-primary" onClick={() => addChunksAnswer(index)}>Add answer</button>
+                                <button className="btn btn-primary tooltip" data-tip="Answer is the answer to the key of chunking cluster." onClick={() => addChunksAnswer(index)}>
+                                    Add answer
+                                </button>
                             </div>
                         </div>
                     ))}
@@ -252,7 +256,9 @@ export default () => {
                             ))}
                         </ul>
                         <div className="w-full text-right">
-                            <button className="btn btn-primary" onClick={() => addExtension()}>Add extension</button>
+                            <button className="btn btn-primary tooltip" data-tip="Extension is usually vocabularies or phrasal verb that is useful for topic" onClick={() => addExtension()}>
+                                Add extension
+                            </button>
                         </div>
                     </div>
                 </div>
