@@ -28,7 +28,7 @@ export default ({ params }) => {
                             <p className="mb-2 font-bold text-lg">Key:  {chunk.question}</p>
                             <ul className="list-disc ml-8">
                                 {chunk.answers.map((a, i) => (
-                                    <li className="mb-2" key={i}>{a}</li>
+                                    <li className="mb-2" key={a+i}>{a}</li>
                                 ))}
                             </ul>
                         </div>

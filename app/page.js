@@ -5,8 +5,8 @@ export default function Home() {
         {/* <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" /> */}
         <div>
           <h1 className="text-5xl font-bold">Hello there!</h1>
-          <p className="text-lg pt-6 pb-4">Don't learn a word a day. Relaxing and use chunks.</p>
-          <p className="text-lg pb-4">Chunking is a learning technique. Let's watch the explain video and see our story of English topic to have a vision. Finally create your own topic of chunks.</p>
+          <p className="text-lg pt-6 pb-4">Don&apos;t learn a word a day. Relaxing and use chunks.</p>
+          <p className="text-lg pb-4">Chunking is a learning technique. Let&apos;s watch the explain video and see our story of English topic to have a vision. Finally create your own topic of chunks.</p>
           <p className="text-lg pb-6">Especially, we have AI for you. That helps you create the topic with ease.</p>
           <a href="/story" className="btn btn-neutral">Get Started</a>
         </div>

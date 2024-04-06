@@ -11,7 +11,6 @@ export default function Topic() {
 
     useEffect(() => {
         const getTopic = async () => {
-            console.log('getTopic:')
             if (!session)
                 return
 
@@ -39,8 +38,6 @@ export default function Topic() {
                 </div>
             )}
 
-
-
             {session &&
                 <>
                     <div className="w-full text-right">
@@ -54,7 +51,7 @@ export default function Topic() {
             }
 
             {session && (
-                <div className="w-full grid grid-cols-5 gap-4">
+                <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                     {topics?.map((t, i) => (
                         <Card title={t.name} link={'/topic/' + t._id} />
                     ))}

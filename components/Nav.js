@@ -25,7 +25,7 @@ export default () => {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navs.map((n, i) => (
-                            <li><a key={n.href} href={n.href}>{n.display}</a></li>
+                            <li><a key={i+n.href} href={n.href}>{n.display}</a></li>
                         ))}
                     </ul>
                 </div>
