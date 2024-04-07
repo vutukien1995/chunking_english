@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Topic() {
 
-    const { data: session } = useSession()
+    const { data: session, status } = useSession()
     const [topics, setTopics] = useState()
 
     useEffect(() => {
@@ -29,6 +29,12 @@ export default function Topic() {
         getTopic()
     }, [session])
 
+    if (status == 'loading')
+        return <div className="main">
+            <div className="w-full text-center">
+                <span className="loading loading-spinner loading-lg"></span>
+            </div>
+        </div>
 
     return (
         <div className="main">
@@ -55,10 +61,7 @@ export default function Topic() {
                         <a href="/topic/ai_find" className="btn btn-primary">Let's AI help you!</a>
                     </div>
                 </>
-
             )}
-
-
         </div>
     );
 }

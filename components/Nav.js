@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { getProviders, signIn, signOut, useSession } from "next-auth/react"
 
 export default () => {
-    const { data: session } = useSession()
+    const { data: session, status: status } = useSession()
 
     const [providers, setProviders] = useState(null)
 
@@ -21,11 +21,11 @@ export default () => {
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                        <img className="h-8 w-8" alt="menu" src="/icons/menu-alt.svg" />
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navs.map((n, i) => (
-                            <li><a key={i+n.href} href={n.href}>{n.display}</a></li>
+                            <li key={n.href}><a href={n.href}>{n.display}</a></li>
                         ))}
                     </ul>
                 </div>
@@ -47,7 +47,9 @@ export default () => {
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            <img alt="Tailwind CSS Navbar component" src={session?.user.image ? session?.user.image : 'https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'} />
+                            {status == "loading" ?
+                            <span className="loading loading-spinner loading-md"></span>
+                            : <img alt="user avatar" src={session?.user.image ? session?.user.image : '/icons/account-avatar-profile-user.svg'} />}
                         </div>
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
@@ -56,7 +58,7 @@ export default () => {
                             <li><a key='logout' onClick={signOut}>Signout</a></li>
                         </> : <>
                             {providers && Object.values(providers).map((provider) => (
-                                <li><a key='login' onClick={() => signIn(provider.id)}>Login</a></li>
+                                <li key={provider.id}><a onClick={() => signIn(provider.id)}>Login</a></li>
                             ))}
                         </>}
                     </ul>
