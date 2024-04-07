@@ -52,7 +52,7 @@ export default function Topic() {
 
                     <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-24">
                         {topics?.map((t, i) => (
-                            <Card title={t.name} link={'/topic/' + t._id} />
+                            <Card key={i} title={t.name} link={'/topic/' + t._id} />
                         ))}
                     </div>
 

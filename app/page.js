@@ -11,8 +11,8 @@ export default function Home() {
           <a href="/story" className="btn btn-neutral">Get Started</a>
         </div>
         <div className="">
-          <iframe className="rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/hydCdGLAh00?si=KkZbAacBeleYpkW0"
-            title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
+          <iframe className="rounded-lg w-[360px] sm:w-[620px] aspect-video md: " src="https://www.youtube.com/embed/hydCdGLAh00?si=KkZbAacBeleYpkW0"
+            title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
           </iframe>
         </div>
       </div>

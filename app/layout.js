@@ -14,7 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="cupcake">
+    <html lang="en" data-theme="cupcake" suppressHydrationWarning>
+      <link rel="icon" href="/icons/english.svg" sizes="any" />
       <body className={inter.className}>
         <Provider>
           <Nav />
