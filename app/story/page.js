@@ -45,18 +45,18 @@ export default () => {
                     Group 3: Công việc
                 </div>
                 <div className="collapse-content grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-                    <Card title="01 Chia sẻ quan điểm làm việc" link="/story/topic/Topic01" />
-                    <Card title="02 Chia sẻ kinh nghiệm thực tập" link="/story/topic/Topic02" />
-                    <Card title="03 Lên lịch hẹn khách hàng nước ngoài" link="/story/topic/Topic02" />
-                    <Card title="04 Xin sếp nghỉ phép" link="/story/topic/Topic02" />
-                    <Card title="05 Lên kế hoạch đi team building trong công ty" link="/story/topic/Topic02" />
-                    <Card title="06 Buồn lòng chuyện cắt giảm nhân sự" link="/story/topic/Topic02" />
-                    <Card title="07 Gửi lời cảm ơn đến sếp trước khi nghỉ việc" link="/story/topic/Topic02" />
+                    <Card title="01 Chia sẻ quan điểm làm việc" link="/story/topic/group_3/topic_1" />
+                    <Card title="02 Chia sẻ kinh nghiệm thực tập" link="/story/topic/group_3/topic_2" />
+                    <Card title="03 Lên lịch hẹn khách hàng nước ngoài" link="/story/topic/group_3/topic_3" />
+                    <Card title="04 Xin sếp nghỉ phép" link="/story/topic/group_3/topic_4" />
+                    <Card title="05 Lên kế hoạch đi team building trong công ty" link="/story/topic/group_3/topic_5" />
+                    <Card title="06 Buồn lòng chuyện cắt giảm nhân sự" link="/story/topic/group_3/topic_6" />
+                    <Card title="07 Gửi lời cảm ơn đến sếp trước khi nghỉ việc" link="/story/topic/group_3/topic_7" />
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 4: Giáo dục
                 </div>
                 <div className="collapse-content grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
@@ -69,8 +69,8 @@ export default () => {
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 5: Trải nghiệm du lịch
                 </div>
                 <div className="collapse-content grid grid-cols-5 gap-4">
@@ -83,8 +83,8 @@ export default () => {
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 6: Xử trí khi đi du lịch
                 </div>
                 <div className="collapse-content grid grid-cols-5 gap-4">
@@ -97,8 +97,8 @@ export default () => {
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 7: Thói quen hàng ngày
                 </div>
                 <div className="collapse-content grid grid-cols-5 gap-4">
@@ -111,8 +111,8 @@ export default () => {
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 8: Nhu cầu - sở thích
                 </div>
                 <div className="collapse-content grid grid-cols-5 gap-4">
@@ -125,8 +125,8 @@ export default () => {
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 9: Tám chuyện công sở
                 </div>
                 <div className="collapse-content grid grid-cols-5 gap-4">
@@ -139,8 +139,8 @@ export default () => {
                 </div>
             </div>
             <div className="collapse collapse-arrow bg-base-200 mb-2">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title text-xl font-medium">
+                <input type="radio" name="my-accordion-2" disabled />
+                <div className="collapse-title text-xl font-medium text-gray-400">
                     Group 10: Họp hành
                 </div>
                 <div className="collapse-content grid grid-cols-5 gap-4">

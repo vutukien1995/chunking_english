@@ -133,7 +133,7 @@ export default () => {
             {aiTopic &&
                 <div>
                     {aiTopic.chunks?.map((chunk, index) => (
-                        <div className="bg-blue-950/10 my-4 p-5 rounded-md border border-white">
+                        <div key={index} className="bg-blue-950/10 my-4 p-5 rounded-md border border-white">
                             <h3 className="mb-5 font-bold underline">Chunking Cluster:</h3>
                             <p className="mb-2 font-bold text-lg">Key:  {chunk.question}</p>
                             <ul className="list-disc ml-8">
